@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadProductDetails()">
+<div class="container">
+    <h1 class="mt-5 text-center">Edit Product</h1>
+    <form id="edit-product-form" class="mt-4">
+        <div class="form-group">
+            <label for="sku">SKU:</label>
+            <input type="text" class="form-control" id="sku" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Product Name:</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" class="form-control" id="price" required>
+        </div>
+
+        <h4>Additional Details</h4>
+        <div id="additional-fields"></div>
+
+        <button type="button" id="add-field-btn" class="btn btn-info btn-block mt-3">Add Another Field</button>
+        <button type="submit" class="btn btn-primary btn-block mt-3">Save Changes</button>
+    </form>
+    <button onclick="location.href='index.html'" class="btn btn-link btn-block mt-3">Back to Home</button>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
